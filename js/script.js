@@ -1,6 +1,14 @@
 function Time(){
     getCurrentTime();
+    
     getAwakeTime();
+    if (getAwakeTimeInSeconds()>86400){
+        window.alert('i cant set clock for more than 24 hours :(')
+        document.getElementById('hours').value ="";
+        document.getElementById('minutes').value ="";
+        document.getElementById('seconds').value ="";
+        return
+    }
     setAwakeTime();
     console.log(setAwakeTime());
     
